@@ -31,5 +31,7 @@ services:
       - test
     environment:
       - MYSQL_URL=mysql://admin_db:admin_db@mysql-fastapi:3306/fastapi
+    volumes:
+      - ./app:/code/app
     depends_on:
       - mysql_db
